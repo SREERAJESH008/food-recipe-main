@@ -12,6 +12,7 @@ import Root from './components/root/root'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Signup from './components/signup/signup'
 import Top from './components/top/top'
+import Recipe from './components/recipe/recipe'
 
 
 
@@ -38,9 +39,16 @@ function App() {
           path: "signUp",
           element: <Signup />,
         },
+
+        {
+          path: "recipe",
+          element: <Recipe />,
+        },
       ],
     },
   ]);
+
+  
 
   return (
     <>

@@ -5,6 +5,7 @@ import Home from "../home/home";
 import Explore from "../explore/export";
 import Login from "../login/login";
 import Footer from "../footer/footer";
+import Recipe from "../recipe/recipe";
 
 
 

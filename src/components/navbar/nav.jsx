@@ -2,6 +2,7 @@ import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
+
 const Navbar = () => {
   return (
     <div className="master">
@@ -10,10 +11,15 @@ const Navbar = () => {
           <h1>Food.</h1>
         </div>
       </Link>
-      <div className="dropdown">
-        <button className="dropbtn">RECIPES</button>
-        <div className="dropdown-content"></div>
-      </div>
+
+      <Link to={`/Recipe`}>
+        <div className="dropdown">
+          <button className="dropbtn">RECIPES</button>
+
+          {/* <div className="dropdown-content"></div> */}
+        </div>
+      </Link>
+
       <div className="dropdown">
         <button className="dropbtn">POPULAR</button>
         <div className="dropdown-content">
