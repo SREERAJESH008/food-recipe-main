@@ -22,7 +22,7 @@ const [apiData, setApiData] = useState(null);
         }
 
         const data = await response.json();
-        console.log(data);
+        setApiData(data);
       } catch (error) {
         console.error(error);
       }
@@ -36,9 +36,8 @@ const [apiData, setApiData] = useState(null);
       <h1>YOUR RECIPES</h1>
       {apiData ? (
         <ul>
-          {/* <li>Answer: {apiData.answer}</li> */}
+          <li>Answer: {apiData.title}</li>
           <li>Some other data: {apiData.someOtherData}</li> 
-          {/* Add more li elements as needed */}
         </ul>
       ) : (
         <p>Loading...</p>
