@@ -33,70 +33,35 @@ const [apiData, setApiData] = useState(null);
   }, []);
 
   return (
-      <div className="recipe-box">
-      <h1>YOUR RECIPES</h1>
+    <div className="recipe-box">
+      <h1 className="heading-re">YOUR RECIPES</h1>
       {apiData ? (
         <ul>
-        
-          <li>Answer: {apiData.map((kannan)=>{<div>
-           { apiData.idMeal}
-          </div>})
-          }
+          <li>
+            {" "}
+            {apiData.meals.map((meal) => (
+              <li className="recipe-con" key={meal.idMeal}>
+                <img className="recipe-img" src={meal.strMealThumb} alt="" />
+                <h2>{meal.strMeal}</h2>
+                <p>Category: {meal.strCategory}</p>
+                <p>Instructions: {meal.strInstructions}</p>
+                {/* <iframe src={meal.strYoutube} frameborder="0"></iframe> */}
+              </li>
+            ))}
+            
           </li>
-          <li>Some other data: {apiData.someOtherData}</li> 
-        </ul>
 
-        
+          {console.log(apiData.meals)}
+        </ul>
       ) : (
         <p>Loading...</p>
       )}
-      {/* {console.log()} */}
     </div>
   );
+  {
+    
+  }
 };
 
 
 export default YourComponent;
-
-
-// const Recipe = () => {
-    // return ( 
-        // <div><h1>hello</h1></div>
-// );
-// }
-
-
-
-// import { useEffect,useState } from "react";
-
-// function App () {
-//   const [posts, setposts] = useState(null);
-//   useEffect(() => {
-//     fetch("https: //www.themealdb.com/api/json/v1/1/random.php")
-//       .then((data) => data.json())
-//       .then((data) => {
-//         setposts(data);
-//       });
-//   }, []);
-
-
-//     return (
-//       <div className="app">
-//         {posts ? (
-//           posts.map((post) => {
-//             return (
-//               <div className="card-body">
-//                 <h5>{post.title}</h5>
-//                 <p>{post.body}</p>
-//               </div>
-//             );
-//           })
-//         ) : (
-//           <h3>Loading...</h3>
-//         )}
-//       </div>
-//     );
-//   };
-
-
-// export default Recipe;
