@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from 'react'
+import "./recipe.css";
 import React, { useEffect } from 'react';
 
 const YourComponent = () => {
@@ -32,21 +33,28 @@ const [apiData, setApiData] = useState(null);
   }, []);
 
   return (
-      <div>
+      <div className="recipe-box">
       <h1>YOUR RECIPES</h1>
       {apiData ? (
         <ul>
-          <li>Answer: {apiData.title}</li>
+        
+          <li>Answer: {apiData.map((kannan)=>{<div>
+           { apiData.idMeal}
+          </div>})
+          }
+          </li>
           <li>Some other data: {apiData.someOtherData}</li> 
         </ul>
+
+        
       ) : (
         <p>Loading...</p>
       )}
+      {/* {console.log()} */}
     </div>
   );
 };
-//   );
-// };
+
 
 export default YourComponent;
 
