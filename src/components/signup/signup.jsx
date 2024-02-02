@@ -37,8 +37,11 @@ const SignUp = () => {
       console.log(err.code);
       if (err.code === "auth/email-already-in-use") {
         alert("");
-      } else if (err.code === "auth/weak-password") {
+        
+      }
+       else if (err.code === "auth/weak-password") {
         alert("");
+
       }
     }
   };

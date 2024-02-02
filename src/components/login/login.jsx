@@ -37,6 +37,7 @@ const Login = () => {
         console.log(err.code);
         if (err.code === "auth/invalid-credential") {
           alert("Invalid Credentials");
+          // navigate("/home");
         }
       }
     }
