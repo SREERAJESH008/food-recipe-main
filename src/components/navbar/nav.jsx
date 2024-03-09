@@ -2,7 +2,6 @@ import { VscAccount } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import "./nav.css";
 
-
 const Navbar = () => {
   return (
     <div className="master">
